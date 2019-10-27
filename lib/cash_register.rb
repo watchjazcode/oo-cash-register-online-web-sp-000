@@ -27,7 +27,15 @@ class CashRegister
     end
   end 
   
-  
+  # We start with a discount of 20
+  # > @discount == 20
+  # Then we divide by 100.0 to get a decimal number
+  # > @discount / 100.0 == 0.2
+  # Next we multiply the discount by the decimal number
+  # > 0.2 * 100 == 20
+  # Finally we subtract the discount from the total
+  # > @total -= 20 
+  # > @total == 80
   
   def void_last_transaction
     @total -= @last_price * @last_quantity
